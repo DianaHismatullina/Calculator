@@ -1,24 +1,21 @@
 cmake_minimum_required(VERSION 2.8)
 
-set(TESTS_FOR_PROJECT calculator)
+set(TESTS_FOR_PROJECT Calculator)
 
-project(${TESTS_FOR_PROJECT}_tests)
+project(${TESTS_FOR_PROJECT}_Tests)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++15")
 
 option(BUILD_SHARED_LIBS "Build shared instead of static library" OFF)
 
-file(GLOB ${PROJECT_NAME}_sources "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp")
+file(GLOB ${PROJECT_NAME}_Sources "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.cpp")
 
 find_package(${TESTS_FOR_PROJECT})
 include_directories(${${TESTS_FOR_PROJECT}_INCLUDE_DIRS}})
 
-include(cmake/FindCPM.cmake)
-CPM_AddModule("cpm-catch"
-  GIT_REPOSITORY "https://github.com/designerror/cpm-catch")
 include_directories(${CPM_INCLUDE_DIRS})
 
-add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_sources} ${${PROJECT_NAME}_headers})
+add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_Sources} ${${PROJECT_NAME}_headers})
 
 target_link_libraries(${PROJECT_NAME} ${TESTS_FOR_PROJECT})
 
