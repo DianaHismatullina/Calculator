@@ -1,7 +1,8 @@
 #include <calculator.hpp>
 #include <catch.hpp>
 
-SCENARIO("calculator summa", "[summa]") {
+SCENARIO("calculator summa", "[summa]") 
+{
     double x = 5.0;
     double y = 6.0;
     
@@ -10,7 +11,8 @@ SCENARIO("calculator summa", "[summa]") {
 	REQUIRE( rv == 11.0);
 }
 
-SCENARIO("calculator sub", "[sub]") {
+SCENARIO("calculator sub", "[sub]") 
+{
     double x = 12.0;
     double y = 6.0;
     
@@ -19,7 +21,8 @@ SCENARIO("calculator sub", "[sub]") {
 	REQUIRE( rv == 6.0);
 }
 
-SCENARIO("calculator mult", "[mult]") {
+SCENARIO("calculator mult", "[mult]") 
+{
     double x = 3.0;
     double y = 4.0;
     
@@ -28,7 +31,8 @@ SCENARIO("calculator mult", "[mult]") {
 	REQUIRE( rv == 12.0);
 }
 
-SCENARIO("calculator dev", "[dev]") {
+SCENARIO("calculator dev", "[dev]") 
+{
     double x = 15.0;
     double y = 5.0;
     
@@ -37,7 +41,8 @@ SCENARIO("calculator dev", "[dev]") {
 	REQUIRE( rv == 3.0);
 }
 
-SCENARIO("calculator pow", "[pow]") {
+SCENARIO("calculator pow", "[pow]") 
+{
     double x = 4.0;
     double y = 2.0;
     
@@ -46,7 +51,8 @@ SCENARIO("calculator pow", "[pow]") {
 	REQUIRE( rv == 16.0);
 }
 
-SCENARIO("calculator sqrt", "[sqrt]") {
+SCENARIO("calculator sqrt", "[sqrt]") 
+{
     double x = 25.0;
     
     double rv = sqrt(x);
